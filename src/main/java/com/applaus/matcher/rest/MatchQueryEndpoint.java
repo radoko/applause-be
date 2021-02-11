@@ -20,8 +20,7 @@ class MatchQueryEndpoint {
 
     @GetMapping("/matches")
     Collection<Match> findMatches(@RequestParam Collection<String> countries,
-                                  @RequestParam Collection<String> deviceIds
-    ) {
+                                  @RequestParam Collection<String> deviceIds) {
         return matchQueryFacade.findMatches(countries, deviceIds);
     }
 
