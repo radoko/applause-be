@@ -1,12 +1,13 @@
-package com.applaus.matcher.repostiory.impl;
+package com.applaus.matcher.persistance;
 
-import com.applaus.matcher.model.Match;
+
+import com.applaus.matcher.query.model.Match;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class MatchRowMapper implements RowMapper<Match> {
+class MatchRowMapper implements RowMapper<Match> {
 
     @Override
     public Match mapRow(ResultSet rs, int i) throws SQLException {

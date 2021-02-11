@@ -1,8 +1,8 @@
-package com.applaus.matcher.repostiory.impl;
+package com.applaus.matcher.persistance;
 
-import com.applaus.matcher.model.Device;
-import com.applaus.matcher.model.Match;
-import com.applaus.matcher.repostiory.MatchQueryRepository;
+import com.applaus.matcher.query.model.Device;
+import com.applaus.matcher.query.model.Match;
+import com.applaus.matcher.query.ports.outbound.MatchQueryRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -14,7 +14,7 @@ import java.util.List;
 
 @Repository
 @AllArgsConstructor
-public class InMemoryMatchQueryRepository implements MatchQueryRepository {
+class InMemoryMatchRepositoryAdapter implements MatchQueryRepository {
 
     JdbcTemplate jdbcTemplate;
 
